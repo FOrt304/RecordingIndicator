@@ -1,9 +1,9 @@
 name: RecordingIndicator
 version: '1.0.2'
 main: dev.acronical.recordingindicator.RecordingIndicator
-api-version: '1.21'
+api-version: '1.20'
 description: A simple plugin that shows a live indicator in the tab list.
-author: Acronical
+author: Acronical, FOrt404
 website: https://acronical.is-a.dev
 commands:
   live:

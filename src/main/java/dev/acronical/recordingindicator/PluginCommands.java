@@ -6,7 +6,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 import org.bukkit.util.StringUtil;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +15,7 @@ public class PluginCommands implements CommandExecutor, TabCompleter {
     private static final String[] COMMANDS = { "on", "off" };
 
     @Override
-    public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
+    public boolean onCommand(CommandSender commandSender,  Command command,  String s,  String[] strings) {
         if (!(commandSender instanceof Player player)) {
             commandSender.sendMessage("[!] Only players can use that command.");
             return true;
@@ -70,7 +69,7 @@ public class PluginCommands implements CommandExecutor, TabCompleter {
     }
 
     @Override
-    public List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command, @NotNull String alias, String[] args) {        //create new array
+    public List<String> onTabComplete(CommandSender sender,  Command command,  String alias, String[] args) {        //create new array
         final List<String> completions = new ArrayList<>();
         StringUtil.copyPartialMatches(args[0], List.of(COMMANDS), completions);
         return completions;
